@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/styles.css">
+   <title>Javascript CheatSheet</title>
+</head>
+<body>
+   <h1>Javascript Cheat Sheet</h1>
+   <section class="cheats">
+      <div class="cheats-wrapper">
+          <div class="strings box">
+            <div class="inner-box">
+              <h2>Strings</h2>
+        <h3> const abc = "abcdefghijklmnopqrstuvwxyz";</h3>
+        <p> var length = abc.length; -------- string length</p>      
+        <p> var esc = 'I don\'t \n know'; ---------  \n new line</p>   
+        <p> var length = abc.length;  ---------        string length</p>      
+        <p> abc.indexOf("lmno");      --------       find substring, -1 if doesn't contain </p>     
+        <p> abc.lastIndexOf("lmno");  --------      last occurance</p>    
+        <p> abc.slice(3, 6);           --------      cuts out "def", negative values count from behind</p>     
+        <p> abc.replace("abc","123");  --------      find and replace, takes regular expressions</p>     
+        <p> abc.toUpperCase();         --------      convert to upper case</p>     
+        <p> abc.toLowerCase();         --------      convert to lower case</p>     
+        <p> abc.concat(" ", str2);     --------      abc + " " + str2</p>    
+        <p> abc.charAt(2);             --------      character at index: "c"</p>    
+        <p> abc[2];                    --------      unsafe, abc[2] = "C" doesn't work</p>    
+        <p> abc.charCodeAt(2);         --------      character code at index: "c" -> 99</p>  
+        <p> abc.split(",");            --------     splitting a string on commas gives an array</p>    
+        <p> abc.split("");            --------       splitting on characters</p>     
+        <p> 128.toString(16);         --------       number to hex(16), octal (8) or binary (2)</p>  
+            </div>
+            
+      </div>
+
+      <div class="nums-Math box">
+         <div class="inner-box"> 
+         <h2>Numbers & Math</h2>
+         <h3> const pi = 3.141;</h3>  
+         <p> pi.toPrecision(2)   ---------    returns 3.1</p>   
+         <p> pi.valueOf();        ---------   returns number</p>  
+         <p> Number(true);        ---------   converts to number</p>   
+         <p> Number(new Date())   ---------   number of milliseconds since 1970</p>   
+         <p> parseInt("3 months"); ---------  returns the first number: 3</p>   
+         <p> parseFloat("3.5 days"); --------- returns 3.5</p>    
+         <p> Number.MAX_VALUE       --------- largest possible JS number</p>  
+         <p> Number.MIN_VALUE      ---------  smallest possible JS number</p>   
+         <p> Number.NEGATIVE_INFINITY --------- (-)Infinity</p>   
+         <p> Number.POSITIVE_INFINITY --------- Infinity</p>   
+         <h2>Math</h2>   
+         <p> var pi = Math.PI;  --------       3.141592653589793</p>  
+         <p> Math.round(4.4);   --------       = 4 - rounded</p>   
+         <p> Math.round(4.5);   --------       = 5</p>   
+         <p> Math.pow(2,8);     --------       = 256 - 2 to the power of 8</p>  
+         <p> Math.sqrt(49);     --------       = 7 - square root </p>   
+         <p> Math.abs(-3.14);    --------      = 3.14 - absolute, positive value</p>  
+         <p> Math.ceil(3.14);    --------      = 4 - rounded up</p>  
+         <p> Math.floor(3.99);   --------      = 3 - rounded down</p>  
+         <p> Math.sin(0);        --------      = 0 - sine</p> 
+         <p> Math.cos(Math.PI);  --------      OTHERS: tan,atan,asin,acos,</p>   
+         <p> Math.min(0, 3, -2, 2); --------  = -2 - the lowest value</p>  
+         <p> Math.max(0, 3, -2, 2); --------   = 3 - the highest value</p>  
+         <p> Math.log(1);           --------   = 0 natural logarithm </p>   
+         <p> Math.exp(1);           --------   = 2.7182pow(E,x)</p>   
+         <p> Math.random();         --------   random number between 0 and 1</p>  
+         <p> Math.floor(Math.random() * 5) + 1;  --------  random integer, from 1 to 5</p> 
+      </div>
+        
+         
+      </div>
+
+      <div class="arrays box">
+         <div class="inner-box"> 
+            <h2>Array Methods</h2>
+           <h3>const dogs = ["Bulldog", "Beagle", "Labrador"];</h3>
+           <p>dogs.toString();       --------                   convert to string: results "Bulldog,Beagle,Labrador"</p>  
+           <p>dogs.join(" * ");          --------               join: "Bulldog * Beagle * Labrador"</p>  
+           <p>dogs.pop();             --------                  remove last element</p>  
+           <p>dogs.push("Chihuahua");  --------                 add new element to the end</p>  
+           <p>dogs[dogs.length] = "Chihuahua";   --------       the same as push</p>  
+           <p>dogs.shift();            --------                 remove first element</p>  
+           <p>dogs.unshift("Chihuahua");   --------             add new element to the beginning of dogs array</p>  
+           <p>delete dogs[0];              --------             change element to undefined (not recommended)</p>  
+           <p>dogs.splice(2, 0, "Pug", "Boxer");  --------      add elements (where, how many to remove, element list)</p>  
+           <p>var animals = dogs.concat(cats,birds); --------   join two arrays (dogs followed by cats and birds)</p>  
+           <p>dogs.slice(1,4);         --------                 elements from [1] to [4-1]</p>  
+           <p>dogs.sort();              --------                sort string alphabetically</p>  
+           <p>dogs.reverse();           --------                sort string in descending order</p>  
+           <p>x.sort(function(a, b){return a - b});  --------   numeric sort</p>  
+           <p>x.sort(function(a, b){return b - a});  --------   numeric descending sort</p>  
+           <p>highest = x[0];                     --------      first item in sorted array is the lowest (or highest) value</p>  
+           <p> x.sort(function(a, b){return 0.5 - Math.random()});  --------   random order sort</p>  
+         </div>
+        
+           
+      </div>
+
+      <div class="arithmetic box">
+         <div class="inner-box">
+            <h2>Arithmetic</h2>
+            <p>a * (b + c)         // grouping</p> 
+            <p>person.age          // member</p>   
+            <p>person[age]         // member</p>   
+            <p>!(a == b)           // logical not</p>  
+            <p>a != b              // not equal</p>  
+            <p>typeof a            // type (number, object, function...)</p>  
+            <p> x << 2  x >> 3      // minary shifting</p> 
+            <p>a = b               // assignment</p>  
+            <p>a == b              // equals  </p>
+            <p>a != b              // unequal</p>  
+            <p>a === b             // strict equal</p> 
+            <p>a !== b             // strict unequal</p>  
+            <p>a < b   a > b       // less and greater than</p> 
+            <p>a <= b  a >= b      // less or equal, greater or eq</p>  
+            <p>a += b // a = a + b (works with - * %...)</p>                
+            <p>a && b              // logical and</p>  </p>  
+            <p>a || b              // logical or</p>  
+         </div>
+        
+      </div>
+
+
+      <div class="loops box">
+         <h2>Loops</h2>
+
+      </div>
+
+      </div>
+
+     
+   </section>
+</body>
+</html>

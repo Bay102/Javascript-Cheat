@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(30 30 30);
+  color: white;
+  margin: auto;
+ 
+}
+
+h2 {
+  background-color: #6384ff;
+  color: black;
+   margin-top: 0;
+ 
+}
+
+.inner-box {
+  min-width: max-content;
+}
+
+.inner-box h3 {
+   background-color: white;
+   color: black;
+   padding: 10px;
+   text-align: center;
+}
+
+.box {
+   text-align: left;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  border: 3px solid white;
+  border-radius: 10px;
+  max-width: 650px;
+  overflow: hidden;
+  height: 575px;
+  overflow-y: scroll;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 10px;
+  margin: auto;
+}
+
+.cheats-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.strings .arrays {
+   margin-top: 920px;
+}
+
